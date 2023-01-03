@@ -55,7 +55,15 @@ const Three = ({ navigation: { goBack, reset } }) => {
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        initialRouteName="one"
+        screenOptions={{
+          headerTintColor: "purple",
+          headerBackTitle: "뒤로",
+          presentation: "modal",
+          animation: "flip",
+        }}
+      >
         <Stack.Screen name="one" component={One} />
         <Stack.Screen name="two" component={Two} />
         <Stack.Screen name="three" component={Three} />
@@ -63,12 +71,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
