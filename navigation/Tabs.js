@@ -1,5 +1,4 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Colors } from "react-native/Libraries/NewAppScreen";
 import Movies from "../screen/Movies";
 import My from "../screen/My";
 import { MaterialIcons } from "@expo/vector-icons";

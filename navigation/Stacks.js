@@ -1,8 +1,8 @@
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-const Stack = () => {
+const Stacks = () => {
   const Stack = createNativeStackNavigator();
 
   const One = ({ navigation: { navigate } }) => {
@@ -73,4 +73,4 @@ const Stack = () => {
   );
 };
 
-export default Stack;
+export default Stacks;
