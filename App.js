@@ -60,13 +60,17 @@ export default function App() {
         screenOptions={{
           headerTintColor: "purple",
           headerBackTitle: "뒤로",
-          presentation: "modal",
-          animation: "flip",
         }}
       >
         <Stack.Screen name="one" component={One} />
         <Stack.Screen name="two" component={Two} />
-        <Stack.Screen name="three" component={Three} />
+        <Stack.Screen
+          options={{
+            presentation: "modal",
+          }}
+          name="three"
+          component={Three}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
