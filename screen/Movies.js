@@ -1,6 +1,12 @@
+import styled from "@emotion/native";
 import { useFocusEffect } from "@react-navigation/native";
 import React, { useCallback, useEffect } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
+
+const SectionTitle = styled.Text`
+  font-size: 30px;
+  color: ${(props) => props.theme.title};
+`;
 
 export default function Movies({ navigation: { navigate } }) {
   useEffect(() => {
@@ -21,7 +27,7 @@ export default function Movies({ navigation: { navigate } }) {
 
   return (
     <View>
-      <Text> Movies </Text>
+      <SectionTitle> Movies </SectionTitle>
       <TouchableOpacity
         onPress={() =>
           navigate("Stacks", { screen: "one", params: { id: 123 } })

@@ -3,15 +3,19 @@ import Movies from "../screen/Movies";
 import My from "../screen/My";
 import { MaterialIcons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
+import { useColorScheme } from "react-native";
+import { PURPLE_COLOR } from "../colors";
 
 const Tab = createBottomTabNavigator();
 
 const Tabs = () => {
+  const isDark = useColorScheme() === "dark";
+
   return (
     <Tab.Navigator
       initialRouteName="my"
       sceneContainerStyle={{
-        backgroundColor: "lavender",
+        backgroundColor: isDark ? PURPLE_COLOR : "white",
       }}
       screenOptions={{
         tabBarLabelPosition: "beside-icon",
