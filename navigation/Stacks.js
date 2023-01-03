@@ -5,7 +5,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 const Stacks = () => {
   const Stack = createNativeStackNavigator();
 
-  const One = ({ navigation: { navigate } }) => {
+  const One = ({ route: { params }, navigation: { navigate } }) => {
+    console.log("params:", params);
     return (
       <TouchableOpacity onPress={() => navigate("two")}>
         <Text>One</Text>
