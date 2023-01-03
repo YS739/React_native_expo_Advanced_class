@@ -4,7 +4,7 @@ import My from "../screen/My";
 import { MaterialIcons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import { useColorScheme } from "react-native";
-import { PURPLE_COLOR } from "../colors";
+import { GREEN_COLOR, PURPLE_COLOR, YELLOW_COLOR } from "../colors";
 
 const Tab = createBottomTabNavigator();
 
@@ -19,6 +19,13 @@ const Tabs = () => {
       }}
       screenOptions={{
         tabBarLabelPosition: "beside-icon",
+        tabBarStyle: {
+          backgroundColor: isDark ? PURPLE_COLOR : "white",
+        },
+        tabBarActiveTintColor: isDark ? YELLOW_COLOR : GREEN_COLOR,
+        tabBarInactiveTintColor: isDark ? "black" : GREEN_COLOR,
+        headerStyle: { backgroundColor: isDark ? PURPLE_COLOR : "white" },
+        headerTintColor: isDark ? YELLOW_COLOR : GREEN_COLOR,
       }}
     >
       <Tab.Screen

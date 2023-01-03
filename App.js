@@ -13,7 +13,7 @@ export default function App() {
   const isDark = useColorScheme() === "dark";
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
-      <NavigationContainer theme={isDark ? DarkTheme : DefaultTheme}>
+      <NavigationContainer>
         <Root />
       </NavigationContainer>
     </ThemeProvider>
